@@ -13,48 +13,6 @@ body {
 
 /* Header styles */
 header {
-    background: linear-gradient(to right, ##b36e00, ##6e4400);
-    color: #white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-table, th, td {
-  border:1px solid blue;
-text-align: center;
-
-}
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header .profile-pic {
-    border-radius: 50%;
-    width: 75px;
-    height: 75px;
-}
-
-/* Header styles */
-header {
     background: #025263;
     color: #white;
     padding: 10px 0;
@@ -88,13 +46,11 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-
 header .profile-pic {
     border-radius: 10%;
     width: 50px;
     height: 50px;
 }
-
 /* Section Styles */
 .container {
     max-width: 1200px;
