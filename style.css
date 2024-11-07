@@ -1,6 +1,6 @@
 /* Reset and base styles */
 * {
-    margin: 0;
+     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -13,62 +13,44 @@ body {
 
 /* Header styles */
 header {
-    background: linear-gradient(to right, #2c3e50, #3498db);
-    color: white;
-    padding: 2rem 1rem;
+    background: linear-gradient(to right, ##b36e00, ##6e4400);
+    color: #white;
+    padding: 10px 0;
     text-align: center;
 }
 
-.nav-menu {
+header .container {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.nav-menu li {
-    margin: 0.5rem 1rem;
+header nav ul {
+    list-style-type: none;
+}
+table, th, td {
+  border:1px solid black;
+text-align: center;
+
+}
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.nav-menu a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.nav-menu a:hover {
-    color: #f1c40f;
-}
-
-/* Profile section */
-.profile-section {
-    margin: 2rem 0;
-}
-
-.profile-picture {
-    width: 25%;
+header .profile-pic {
     border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 1rem;
-}
-
-/* Main content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.section {
-    margin-bottom: 3rem;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2c3e50;
+    width: 50px;
+    height: 50px;
 }
 
 /* Card styles */
