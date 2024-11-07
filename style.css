@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,102 +6,197 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6; background: #e1ffde   ;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Header styles */
 header {
-    background: #333;
-    color: #white;
-    padding: 10px 0;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-header .container {
+.nav-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-header nav ul {
-    list-style-type: none;
-}
-table, th, td {
-  border:1px solid black;
-text-align: center;
-
-}
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
+.nav-menu li {
+    margin: 0.5rem 1rem;
 }
 
-header nav ul li a {
+.nav-menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-header .profile-pic {
+.nav-menu a:hover {
+    color: #f1c40f;
+}
+
+/* Profile section */
+.profile-section {
+    margin: 2rem 0;
+}
+
+.profile-picture {
+    width: 25%;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border: 5px solid white;
+    margin-bottom: 1rem;
 }
 
-/* Section Styles */
-.container {
+/* Main content */
+main {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
 }
 
 h2 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
 }
 
-section {
-    margin-bottom: 40px;
+/* Card styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
 }
 
-ul {
-    list-style-type: square;
-    margin-left: 20px;
+/* Standard card style (for Education, Experience, Career sections) */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-footer {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Hobbies section specific card styles */
+#hobbies .card {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+}
+
+#hobbies .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Increased gap between hobby cards */
+}
+
+#hobbies .card-image {
+    width: 100%;
+    height: 100%;
+}
+
+#hobbies .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+#hobbies .card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
     text-align: center;
     padding: 20px;
-    background: #333;
-    color: white;
-    margin-top: 20px;
 }
 
-/* Responsive Design */
+#hobbies .card:hover .card-image img {
+    opacity: 0;
+}
+
+#hobbies .card:hover .card-text {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    header .container {
+    .nav-menu {
         flex-direction: column;
+        align-items: center;
     }
 
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+    .nav-menu li {
+        margin: 0.5rem 0;
     }
 
-    header .profile-pic {
-        margin-bottom: 10px;
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    #hobbies .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* Reset gap for mobile view */
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
+    .profile-picture {
+        width: 150px;
+        height: 150px;
     }
 
-    header nav ul li {
-        margin-right: 10px;
+    h1 {
+        font-size: 1.5rem;
     }
+}
+
+.card-heading{
+    color: #3498db;
 }
