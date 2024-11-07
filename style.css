@@ -55,7 +55,7 @@ header .profile-pic {
 
 /* Header styles */
 header {
-    background: #008f47;
+    background: #025263;
     color: #white;
     padding: 10px 0;
     text-align: center;
@@ -90,9 +90,9 @@ header nav ul li a {
 }
 
 header .profile-pic {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    border-radius: 25%;
+    width: 75px;
+    height: 75px;
 }
 
 /* Section Styles */
