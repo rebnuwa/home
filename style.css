@@ -53,91 +53,67 @@ header .profile-pic {
     height: 50px;
 }
 
-/* Card styles */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
-}
-
-/* Standard card style (for Education, Experience, Career sections) */
-.card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.card ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-/* Hobbies section specific card styles */
-#hobbies .card {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0;
-}
-
-#hobbies .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 100px; /* Increased gap between hobby cards */
-}
-
-#hobbies .card-image {
-    width: 100%;
-    height: 100%;
-}
-
-#hobbies .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s;
-}
-
-#hobbies .card-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
+/* Header styles */
+header {
+    background: #333;
+    color: #white;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px;
 }
 
-#hobbies .card:hover .card-image img {
-    opacity: 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-#hobbies .card:hover .card-text {
-    opacity: 1;
+header nav ul {
+    list-style-type: none;
+}
+table, th, td {
+  border:1px solid black;
+text-align: center;
+
+}
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* Section Styles */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
 /* Footer */
 footer {
     text-align: center;
@@ -146,39 +122,33 @@ footer {
     color: white;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-menu {
+    header .container {
         flex-direction: column;
-        align-items: center;
     }
 
-    .nav-menu li {
-        margin: 0.5rem 0;
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-
-    #hobbies .card-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem; /* Reset gap for mobile view */
+    header .profile-pic {
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .profile-picture {
-        width: 150px;
-        height: 150px;
+    body {
+        font-size: 14px;
     }
 
-    h1 {
-        font-size: 1.5rem;
+    header nav ul li {
+        margin-right: 10px;
     }
 }
 
-.card-heading{
+
+.container-heading{
     color: #3498db;
 }
