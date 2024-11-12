@@ -31,11 +31,33 @@ header .container {
 header nav ul {
     list-style-type: none;
 }
-table, th, td {
-  border:1px solid blue;
-text-align: center;
-
+.section {
+    margin-bottom: 3rem;
 }
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Card styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Standard card style (for Education, Experience, Career sections) */
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
 header nav ul li {
     display: inline;
     margin-right: 20px;
