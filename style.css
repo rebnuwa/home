@@ -103,7 +103,16 @@ footer {
         margin-right: 10px;
     }
 }
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
 
+.section {
+    margin-bottom: 3rem;
+}
 
 .container-heading{
     color: #3498db;
